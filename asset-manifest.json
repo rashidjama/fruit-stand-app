@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fruit-stand-app/static/css/main.a1661bba.css",
+    "main.js": "/fruit-stand-app/static/js/main.704ed3cf.js",
+    "static/js/787.d5569c12.chunk.js": "/fruit-stand-app/static/js/787.d5569c12.chunk.js",
+    "index.html": "/fruit-stand-app/index.html",
+    "main.a1661bba.css.map": "/fruit-stand-app/static/css/main.a1661bba.css.map",
+    "main.704ed3cf.js.map": "/fruit-stand-app/static/js/main.704ed3cf.js.map",
+    "787.d5569c12.chunk.js.map": "/fruit-stand-app/static/js/787.d5569c12.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1661bba.css",
+    "static/js/main.704ed3cf.js"
+  ]
+}
