@@ -1,0 +1,10 @@
+.Card {
+    width: 300px;
+    height: 250px;
+    border: 1px solid black;
+    text-align: center;
+    margin: 8px;
+}
+.Icon {
+    font-size: 8em;
+}

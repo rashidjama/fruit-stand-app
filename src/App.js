@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react'
+import FruitsList from './FruitsList';
+import fruits from './fruits';
+import SearchBox from './SearchBox';
+import ScrollBar from './ScrollBar';
+import ErrorBoundry from './ErrorBoundry';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      fruits: fruits,
+      searchField: ''
+    }
+  }
+  onSearch = (e) => {
+    this.setState({searchField: e.target.value});
+  }
+
+  render() {
+    const filteredFruits = this.state.fruits.filter(fruit => {
+      return fruit.name.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase())
+    })
+    return(
+      <div className="App">
+      <h1>Fruits Stand</h1>
+      <SearchBox onSearch={this.onSearch}/>
+      <ScrollBar>
+        <ErrorBoundry>
+        <FruitsList fruits={ filteredFruits }/>
+        </ErrorBoundry>
+      </ScrollBar>
     </div>
-  );
+    )
+  }
 }
 
 export default App;
